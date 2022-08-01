@@ -8,7 +8,7 @@ import Menu from './MenuComponent';
 import Home from './HomeComponent';
 import Contact from './ContactComponent';
 import About from './AboutComponent';
-import { connect, Connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 
 const mapStateToProps=(state)=>{
