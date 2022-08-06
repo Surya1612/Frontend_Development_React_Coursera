@@ -171,7 +171,8 @@ function RenderDish({dish}){
       );
      }
 
- function RenderComments({comments, addComment, dishId}) {
+ function RenderComments({comments, addComment, dishId,commentsErrMess}) {
+    
    if(comments !=null){
     return (
 
