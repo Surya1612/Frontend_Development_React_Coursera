@@ -3,6 +3,8 @@ import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle} from 'reactstrap';
   import Loader from './LoaderComponent';
   import { baseUrl } from '../shared/baseUrl';
+  import { FadeTransform } from 'react-animation-components';
+
 
   function RenderCard({item,isLoading,errMess}){
     if (isLoading) {
@@ -16,6 +18,10 @@ import { Card, CardImg, CardText, CardBody,
       );
   }else{
     return(
+      <FadeTransform in
+      transformProps={{
+          exitTransform: 'scale(0.5) translateY(-50%)'
+      }}>
        <Card>
         <CardImg src={ baseUrl + item.image} alt={item.name}></CardImg>
         <CardBody>
@@ -25,6 +31,7 @@ import { Card, CardImg, CardText, CardBody,
         </CardBody>
 
        </Card>
+       </FadeTransform>
     );
   }
   }
