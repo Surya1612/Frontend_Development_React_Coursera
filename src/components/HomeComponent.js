@@ -18,10 +18,7 @@ import { Card, CardImg, CardText, CardBody,
       );
   }else{
     return(
-      <FadeTransform in
-      transformProps={{
-          exitTransform: 'scale(0.5) translateY(-50%)'
-      }}>
+   
        <Card>
         <CardImg src={ baseUrl + item.image} alt={item.name}></CardImg>
         <CardBody>
@@ -31,7 +28,7 @@ import { Card, CardImg, CardText, CardBody,
         </CardBody>
 
        </Card>
-       </FadeTransform>
+      
     );
   }
   }
@@ -47,7 +44,7 @@ import { Card, CardImg, CardText, CardBody,
                 <RenderCard item={props.promotion} isLoading={props.promoLoading} errMess={props.promoErrMess} />
                 </div>
                 <div className="col-12 col-md m-1">
-                    <RenderCard item={props.leader} />
+                    <RenderCard item={props.leader} isLoading={props.leaderLoading}  errMess={props.leaderErrMess}/>
                 </div>
             </div>
         </div>
